@@ -127,3 +127,8 @@ private final class OnDeinit: Equatable {
   deinit { self.onDeinit() }
   static func == (lhs: OnDeinit, rhs: OnDeinit) -> Bool { true }
 }
+let store = Store(
+      initialState: .init(),
+      reducer: reducer,
+      environment: ()
+    )
